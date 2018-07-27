@@ -84,7 +84,7 @@ spec:
           protocol: TCP
         livenessProbe:
           failureThreshold: 3
-          periodSeconds: 120
+          periodSeconds: 122
           successThreshold: 1
           tcpSocket:
             port: transport
