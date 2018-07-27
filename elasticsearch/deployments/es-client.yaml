@@ -101,8 +101,6 @@ spec:
           name: init-sysctl
           securityContext:
             privileged: true
-      nodeSelector:
-        node-role: es_node
       volumes:
         - emptyDir:
             medium: ''
