@@ -18,8 +18,6 @@ spec:
         component: es-elasticsearch
         role: data
     spec:
-      nodeSelector:
-        node-role: es_data_node
       initContainers:
       - name: init-sysctl
         image: busybox:latest
@@ -72,7 +70,7 @@ spec:
         - name: HTTP_CORS_ALLOW_ORIGIN
           value: "true"
         - name: ES_JAVA_OPTS
-          value: -Xms4g -Xmx4g
+          value: -Xms2g -Xmx2g
         - name: PROCESSORS
           valueFrom:
             resourceFieldRef:
