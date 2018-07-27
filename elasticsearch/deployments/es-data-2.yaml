@@ -18,8 +18,6 @@ spec:
         component: es-elasticsearch
         role: data
     spec:
-      nodeSelector:
-        node-role: es_data2_node
       initContainers:
       - name: init-sysctl
         image: busybox:latest
