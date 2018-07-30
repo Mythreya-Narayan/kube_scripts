@@ -105,4 +105,4 @@ spec:
           #- name: elasticdir
           #  hostPath:
           #      path: /data
-          #te
+          #t
