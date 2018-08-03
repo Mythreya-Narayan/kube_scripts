@@ -59,7 +59,7 @@
                   resourceFieldRef:
                     divisor: '0'
                     resource: limits.cpu
-            image: 'girishmaplelabs/elasticsearch:5.4.3'
+            image: 'girishmaplelabs/elasticsearch:6.2.4_snap'
             imagePullPolicy: IfNotPresent
             livenessProbe:
               failureThreshold: 3
@@ -93,7 +93,7 @@
                   - SYS_RESOURCE
               privileged: false
             volumeMounts:
-              - mountPath: /usr/share/elasticsearch/es_data
+              - mountPath: /usr/share/elasticsearch/data
                 name: storage
         initContainers:
           - command:
