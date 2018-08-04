@@ -33,7 +33,7 @@ spec:
             add:
               - IPC_LOCK
               - SYS_RESOURCE
-        image: girishmaplelabs/elasticsearch:5.4.3
+        image: girishmaplelabs/elasticsearch:6.2.4
         imagePullPolicy: IfNotPresent
         env:
         - name: NAMESPACE
