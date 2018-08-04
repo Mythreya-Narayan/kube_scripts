@@ -18,6 +18,8 @@
           release: es
           role: client
       spec:
+        nodeSelector:
+            node-role: spinnaker_node 
         containers:
           - env:
               - name: NAMESPACE
