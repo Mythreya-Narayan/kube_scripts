@@ -18,6 +18,8 @@ spec:
         component: es-elasticsearch
         role: master
     spec:
+      nodeSelector:
+        node-role: spinnaker_node
       initContainers:
       - name: init-sysctl
         image: busybox:latest
