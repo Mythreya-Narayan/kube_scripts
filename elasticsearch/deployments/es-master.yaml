@@ -97,14 +97,11 @@ spec:
             port: 9300
           timeoutSeconds: 10
         volumeMounts:
-        - name: storage
-          mountPath: /usr/share/elasticsearch/es_data
+        - name: elasticdir
+          mountPath: /data
       #restartPolicy: Always
       volumes:
-          - emptyDir:
-              medium: ""
-            name: "storage"
-          #- name: elasticdir
-          #  hostPath:
-          #      path: /data
+          - name: elasticdir
+            hostPath:
+                path: /es_new
           #tes
