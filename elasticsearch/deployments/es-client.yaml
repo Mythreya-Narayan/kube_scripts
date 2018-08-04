@@ -95,8 +95,8 @@
                   - SYS_RESOURCE
               privileged: false
             volumeMounts:
-              - mountPath: /usr/share/elasticsearch/data
-                name: storage
+              - name: elasticdir
+                mountPath: /data
         initContainers:
           - command:
               - sysctl
@@ -110,8 +110,9 @@
               privileged: true
         restartPolicy: Always
         volumes:
-          - emptyDir: {}
-            name: storage
-            #t
+          - name: elasticdir
+            hostPath:
+                #path: /elasticsearch
+              path: /es_new
             
      
