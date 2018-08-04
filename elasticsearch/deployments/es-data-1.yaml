@@ -93,20 +93,12 @@ spec:
           timeoutSeconds: 10
           initialDelaySeconds: 20
         volumeMounts:
-        - name: storage
-          mountPath: /usr/share/elasticsearch/es_data
+        - name: elasticdir
+          mountPath: /data
       volumes:
-          - emptyDir:
-              medium: ""
-            name: storage
-     #   volumeMounts:
-     #   - name: elasticdir
-     #     mountPath: /usr/share/elasticsearch/es_data
-     #     #securityContext:
-     #     #  fsGroup: 1000
-     #     #  runAsUser: 1000
-     # volumes:
-     #     - name: elasticdir
-     #       hostPath:
-     #           path: /data
+        - name: elasticdir
+          hostPath:
+          #path: /elasticsearch
+            path: /es_new
+     
    
